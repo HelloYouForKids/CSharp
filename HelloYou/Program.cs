@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading;
 
 namespace HelloYou
@@ -11,15 +12,15 @@ namespace HelloYou
     static void Main(string[] args)
     {
       //Say
-      
+      Say("What is your name?");
       //Listen
-
+      var name = Listen();
       while (true)
       {
         //Say
-        
+        Say("Hello {0}!", name);
         //Wait
-
+        Wait(50);
       }
     }
 
